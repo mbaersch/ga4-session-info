@@ -1,2 +1,20 @@
 # ga4-session-info
-Custom Variable Template for Google Tag Manager
+
+**Custom Variable Template for Google Tag Manager**
+
+Reads GA4 `_ga_xxxxxx` cookie and extracts data 
+
+![Template Status](https://img.shields.io/badge/Community%20Template%20Gallery%20Status-submitted-orange) ![Repo Size](https://img.shields.io/github/repo-size/mbaersch/ga4-session-info) ![License](https://img.shields.io/github/license/mbaersch/ga4-session-info)
+
+---
+
+## Usage
+Pick a method to determine a cookie name for the right session either by entering the cookie name or just the measurement id for a data stream.
+
+### Result type
+Chose what value to return:
+  - **Last event timestamp**: GA4 updates a timestamp every time an event is sent
+  - **Seconds since last event**: calculates elapsed time since last event timestamp
+  - **Session ID**: id for current session (matches timestamp of session start)
+  - **Session number**: number of current session 
+  - **Cookie value**: full cookie value (undecoded)     
