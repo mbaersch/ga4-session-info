@@ -1,4 +1,4 @@
-# ga4-session-info
+# GA4 Session Info
 
 **Custom Variable Template for Google Tag Manager**
 
