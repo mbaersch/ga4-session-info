@@ -1,0 +1,6 @@
+homepage: "https://www.markus-baersch.de"
+documentation: "https://github.com/mbaersch/ecommerce-selector#readme"
+versions:
+  # Latest version
+  - sha: 457cf2c1fc925f5351bfdea943cbbadd35f1564d
+    changeNotes: Initial release.
