@@ -14,6 +14,9 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "GA4 Session Info",
+  "categories": [
+     "UTILITY"
+  ],
   "description": "get last event timestamp, session id or time since last event from GA4 session cookie",
   "containerContexts": [
     "WEB"
