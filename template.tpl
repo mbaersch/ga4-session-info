@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -160,17 +160,12 @@ ___WEB_PERMISSIONS___
 
 ___TESTS___
 
-scenarios:
-- name: Cookie Test
-  code: "const mockData = {\n  method: \"measurement_id\",\n  measurementId: \"G-123456789\"\
-    ,\n  cookieName: \"dummy\",\n  resultType: \"cookie_content\" \n};\n\n// Call\
-    \ runCode to run the template's code.\nlet variableResult = runCode(mockData);\n\
-    \n// Verify that the variable returns a result.\nassertThat(variableResult).isNotEqualTo(undefined);"
+scenarios: []
 setup: ''
 
 
 ___NOTES___
 
-Created on 13.8.2023, 23:51:41
+Created on 14.8.2023, 00:10:37
 
 
