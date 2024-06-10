@@ -4,7 +4,7 @@
 
 Reads GA4 `_ga_xxxxxx` cookie and extracts data 
 
-![Template Status](https://img.shields.io/badge/Community%20Template%20Gallery%20Status-submitted-orange) ![Repo Size](https://img.shields.io/github/repo-size/mbaersch/ga4-session-info) ![License](https://img.shields.io/github/license/mbaersch/ga4-session-info)
+[![Template Status](https://img.shields.io/badge/Community%20Template%20Gallery%20Status-published-green)](https://tagmanager.google.com/gallery/#/owners/mbaersch/templates/ga4-session-info) ![Repo Size](https://img.shields.io/github/repo-size/mbaersch/ga4-session-info) ![License](https://img.shields.io/github/license/mbaersch/ga4-session-info)
 
 ---
 
