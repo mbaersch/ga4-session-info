@@ -116,7 +116,6 @@ ___TEMPLATE_PARAMETERS___
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
-// Vorlagencode hier eingeben.
 const getCookieValues = require("getCookieValues");
 const makeString = require("makeString");
 const Math = require("Math");
@@ -132,12 +131,12 @@ if (cookieValue.indexOf("GS2.1.s") === 0) {
   //new format
   //GS2.1.s<SESSION_ID>$o<SESSION_NUMBER>$g1$t<LAST_HIT_TS>$j<XXX1>$<XXX2>$<XXX3>
   let cookieParts = cookieValue.split("$");
-  let ts = cookieParts[3].replace("t", "");
+  let ts = cookieParts[3] ? cookieParts[3].replace("t", "") : undefined;
 
-  if (rt === "session_id") return cookieParts[0].replace("GS2.1.s", "");
-  if (rt === "session_number") return cookieParts[1].replace("o", "");
+  if (rt === "session_id" && cookieParts[0]) return cookieParts[0].replace("GS2.1.s", "");
+  if (rt === "session_number" && cookieParts[1]) return cookieParts[1].replace("o", "");
   if (rt === "timestamp") return ts;
-  if (rt === "duration") return Math.round(Math.round(require("getTimestampMillis")() / 1000) - ts);    
+  if (rt === "duration" && ts) return Math.round(Math.round(require("getTimestampMillis")() / 1000) - ts);    
     
 } else {
   
