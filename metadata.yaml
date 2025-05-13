@@ -2,9 +2,11 @@ homepage: "https://www.markus-baersch.de"
 documentation: "https://github.com/mbaersch/ecommerce-selector#readme"
 versions:
   # Latest version
+  - sha: 9e97da9e62e33e8c339f835b871c58bdd33f42ba
+    changeNotes: adjusted for new session cookie format
+  # Older versions  
   - sha: 9ee3db3c143f7c7742bd5be215aa6fe1dc0d92ec
     changeNotes: added category
-  # Older versions  
   - sha: dce5022f17506667d5f87342e2d0f35fb076fa20
     changeNotes: irrelevant test deleted
   - sha: 457cf2c1fc925f5351bfdea943cbbadd35f1564d
