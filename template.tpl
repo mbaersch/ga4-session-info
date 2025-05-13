@@ -15,9 +15,9 @@ ___INFO___
   "securityGroups": [],
   "displayName": "GA4 Session Info",
   "categories": [
-     "UTILITY"
+    "UTILITY"
   ],
-  "description": "get last event timestamp, session id or time since last event from GA4 session cookie",
+  "description": "get last event timestamp, session number, session id, or time since last event from GA4 session cookie",
   "containerContexts": [
     "WEB"
   ]
@@ -125,13 +125,30 @@ const rt = data.resultType||"timestamp";
 const cn = (data.method === "cookiename") ? data.cookieName : (data.measurementId||"").replace('G-', '_ga_');
 
 const cookieValue = makeString(getCookieValues(cn)||"");
-const cookieParts = (cookieValue).split(".");
-
 if (rt === "cookie_content") return cookieValue;
-if (rt === "session_id") return cookieParts[2];
-if (rt === "session_number") return cookieParts[3];
-if (rt === "timestamp") return cookieParts[5];
-if (rt === "duration") return Math.round(Math.round(require("getTimestampMillis")() / 1000) - cookieParts[5]);
+
+if (cookieValue.indexOf("GS2.1.s") === 0) {
+
+  //new format
+  //GS2.1.s<SESSION_ID>$o<SESSION_NUMBER>$g1$t<LAST_HIT_TS>$j<XXX1>$<XXX2>$<XXX3>
+  let cookieParts = cookieValue.split("$");
+  let ts = cookieParts[3].replace("t", "");
+
+  if (rt === "session_id") return cookieParts[0].replace("GS2.1.s", "");
+  if (rt === "session_number") return cookieParts[1].replace("o", "");
+  if (rt === "timestamp") return ts;
+  if (rt === "duration") return Math.round(Math.round(require("getTimestampMillis")() / 1000) - ts);    
+    
+} else {
+  
+  //old format
+  let cookieParts = cookieValue.split(".");
+  if (rt === "session_id") return cookieParts[2];
+  if (rt === "session_number") return cookieParts[3];
+  if (rt === "timestamp") return cookieParts[5];
+  if (rt === "duration") return Math.round(Math.round(require("getTimestampMillis")() / 1000) - cookieParts[5]);
+
+}
 
 
 ___WEB_PERMISSIONS___
