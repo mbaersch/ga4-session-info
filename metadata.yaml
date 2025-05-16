@@ -2,7 +2,7 @@ homepage: "https://www.markus-baersch.de"
 documentation: "https://github.com/mbaersch/ga4-session-info#readme"
 versions:
   # Latest version
-  - sha: c45f5d705ea9c131034ad51b6b3df0c39004dabe
+  - sha: 5d4e6b846bd1fc2dca4503475241100b3c7043e7
     changeNotes: adjusted for new session cookie format
   # Older versions  
   - sha: 9ee3db3c143f7c7742bd5be215aa6fe1dc0d92ec
