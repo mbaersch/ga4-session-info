@@ -3,11 +3,11 @@ documentation: "https://github.com/mbaersch/ga4-session-info#readme"
 versions:
   # Latest version
   - sha: 5d4e6b846bd1fc2dca4503475241100b3c7043e7
-    changeNotes: adjusted for new session cookie format
+    changeNotes: adjusted for new session cookie format.
   # Older versions  
   - sha: 9ee3db3c143f7c7742bd5be215aa6fe1dc0d92ec
-    changeNotes: added category
+    changeNotes: added category.
   - sha: dce5022f17506667d5f87342e2d0f35fb076fa20
-    changeNotes: irrelevant test deleted
+    changeNotes: irrelevant test deleted.
   - sha: 457cf2c1fc925f5351bfdea943cbbadd35f1564d
     changeNotes: Initial release.
