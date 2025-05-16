@@ -17,4 +17,6 @@ Chose what value to return:
   - **Seconds since last event**: calculates elapsed time since last event timestamp
   - **Session ID**: id for current session (matches timestamp of session start)
   - **Session number**: number of current session 
+  - **Session engaged marker**: 1 if session is engaged, otherwise 0
+  - **User ID hash**: hash if user id is set
   - **Cookie value**: full cookie value (undecoded)     
